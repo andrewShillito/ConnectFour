@@ -1,7 +1,39 @@
+html, body {
+    height: 100%;
+}
+
+div.content {
+   min-height: 100%;
+   height: 100%; 
+}
+
+div.container {
+    min-height: 80%;
+    height: 80%;
+}
+
+div.row{
+    height:100%;
+}
+
+div.col-7{
+    height:100%;
+}
+
+table {
+    width: 100%;
+    height: 100%;
+}
+
+td {
+    width: 14%;
+    height: 14%;
+}
+
 td button{
     margin: 1px;
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    height: 100%;
     border-radius: 100%;
     border: 4px solid black;
     background-color: gray;
@@ -21,13 +53,7 @@ button:hover{
     height: 100%;
     background-color: green;
     color: white;
-    
-}
 
-#resetBtn {
-    margin: 0px;
-    padding: 0px;
-    
 }
 
 #container{
