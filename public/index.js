@@ -1,6 +1,22 @@
 // const $ = require("jquery");
 
 $(document).ready(function(){
+  
+  function setDimensions(){
+    let buttons = $("td button");
+    console.log(buttons);
+    console.log(buttons.eq(0));
+    console.log(buttons.eq(0).css("height"));
+    console.log(buttons.eq(0).css("width"));
+    if (parseFloat(buttons.eq(0).css("height")>parseFloat(buttons.eq(0).css("width")))){
+      buttons.css("height", buttons.css("width"));
+    } else if (parseFloat(buttons.eq(0).css("width"))>parseFloat(buttons.eq(0).css("height"))){
+      buttons.css("width", buttons.css("height"));
+    }
+  } 
+  
+  setDimensions();
+
 
   var pOne = prompt("Player One enter your name.  You will be Blue");
   var pOneColor = 'rgb(86, 151, 255)';
@@ -23,20 +39,6 @@ $(document).ready(function(){
   var winHeight = window.innerHeight;
   var winWidth = window.innerWidth;
   
-  function setDimensions(){
-    let buttons = $("td button");
-    console.log(buttons);
-    console.log(buttons.eq(0));
-    console.log(buttons.eq(0).css("height"));
-    console.log(buttons.eq(0).css("width"));
-    if (parseFloat(buttons.eq(0).css("height")>parseFloat(buttons.eq(0).css("width")))){
-      buttons.css("height", buttons.css("width"));
-    } else if (parseFloat(buttons.eq(0).css("width"))>parseFloat(buttons.eq(0).css("height"))){
-      buttons.css("width", buttons.css("height"));
-    }
-  } 
-  
-  setDimensions();
   
   window.addEventListener("resize", setDimensions());
 
