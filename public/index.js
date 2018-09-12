@@ -19,6 +19,26 @@ $(document).ready(function(){
 
   var table = $('tr');
   var gameWon = false;
+  
+  var winHeight = window.innerHeight;
+  var winWidth = window.innerWidth;
+  
+  function setDimensions(){
+    let buttons = $("td button");
+    console.log(buttons);
+    console.log(buttons.eq(0));
+    console.log(buttons.eq(0).css("height"));
+    console.log(buttons.eq(0).css("width"));
+    if (parseFloat(buttons.eq(0).css("height")>parseFloat(buttons.eq(0).css("width")))){
+      buttons.css("height", buttons.css("width"));
+    } else if (parseFloat(buttons.eq(0).css("width"))>parseFloat(buttons.eq(0).css("height"))){
+      buttons.css("width", buttons.css("height"));
+    }
+  } 
+  
+  setDimensions();
+  
+  window.addEventListener("resize", setDimensions());
 
   function returnColor(rowIndex, colIndex){
     return table.eq(rowIndex).find('td').eq(colIndex).find('button').css('background-color');

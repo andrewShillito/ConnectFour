@@ -9,15 +9,19 @@ div.content {
 
 div.container {
     min-height: 80%;
+    min-width: 80%;
     height: 80%;
+    width: 80%;
 }
 
 div.row{
     height:100%;
+    width: 100%;
 }
 
 div.col-7{
     height:100%;
+    width: 100%;
 }
 
 table {
@@ -28,6 +32,10 @@ table {
 td {
     width: 14%;
     height: 14%;
+    max-height: 150px;
+    max-width: 150px;
+    min-height: 5px;
+    min-width: 5px;
 }
 
 td button{
